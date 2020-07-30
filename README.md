@@ -14,6 +14,8 @@ Getting setup to use the sample is a two-part problem. There must be a functioni
 
 # Installation of Flask Sample API.
 
+Use the following commands:
+
 ```
 cd flask_app
 python -m venv venv
@@ -22,6 +24,30 @@ pip install -r requirements.txt
 python app.py
 
 ```
+
+At this point, you should have the following urls at http://localhost:5000:
+
+```
+
+/api/v1/customers
+/api/v1/customers/<int:id>
+/api/v1/invoice-items
+/api/v1/invoice-items/<int:id>
+/api/v1/invoices
+/api/v1/invoices/<int:id>
+/api/v1/meta
+/api/v1/meta/classes
+/api/v1/meta/classes/<string:name>
+/api/v1/meta/customers/collection
+/api/v1/meta/customers/single
+/api/v1/meta/invoice-items/single
+/api/v1/meta/invoices/collection
+/api/v1/meta/invoices/single
+
+```
+
+
+
 # Installation Vue-Meta-Info
 ```
 npm install
