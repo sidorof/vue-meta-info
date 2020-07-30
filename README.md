@@ -10,9 +10,11 @@ Because the output of the API is all JSON, it can be presented via a front-end a
 
 Resource endpoints as detailed below are available. The following image is a typical class, showing the parent and a related child table.
 
-The details of the class table follow path:
+The details of the class table follow the path:
 
 dbtable => SQLAlchemy => DBBase => Flask-RESTful-DBBase => Vue
+
+Although it is possible to up alter the data requirements and validation and serialization anywhere in the above path, normally you would try to get the configuration right at the start, and let the results bubble up and be used without further effort.
 
 ![Sample Class Table](public/screenshot1.png)
 
