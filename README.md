@@ -8,6 +8,15 @@ Because the output of the API is all JSON, it can be presented via a front-end a
 
 ![Sample Screenshot](public/screenshot.png)
 
+Resource endpoints as detailed below are available. The following image is a typical class, showing the parent and a related child table.
+
+The details of the class table follow path:
+
+dbtable => SQLAlchemy => DBBase => Flask-RESTful-DBBase => Vue
+
+![Sample Class Table](public/screenshot1.png)
+
+
 ## Project setup
 
 Getting setup to use the sample is a two-part problem. There must be a functioning Flask server with Flask-RESTful-DBBase installed.  A sample app is found in the flask_app directory. Once that is started the Vue project can be run.
@@ -45,7 +54,6 @@ At this point, you should have the following urls at http://localhost:5000:
 /api/v1/meta/invoices/single
 
 ```
-
 
 
 # Installation Vue-Meta-Info
