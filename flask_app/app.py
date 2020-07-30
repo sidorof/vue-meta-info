@@ -44,7 +44,6 @@ def add_meta(meta_resource):
     resource = meta_resource.resource_class
     cls = resource.model_class
     res_endpoint = resource.__name__
-    print("res_endpoint", res_endpoint)
     all_metas[res_endpoint] = {
         "name": res_endpoint,
         "metaUrl": meta_resource.get_urls()[0],
