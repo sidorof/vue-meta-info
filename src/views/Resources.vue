@@ -1,12 +1,13 @@
 <template>
 <v-container fluid>
   <v-card>
-    <v-card-title class="text-h3 ml-4 pl-6">Resources</v-card-title>
+    <v-card-title class="text-h2 ml-4 pl-6">Resources</v-card-title>
+    <v-divider></v-divider>
     <v-row no-gutters>
     <v-col cols="3">
       <ResourcesList/>
     </v-col>
-    <v-col cols="9" v-if="getResource">
+    <v-col cols="9" md="8" v-if="getResource">
       <v-card-title>{{ getResource.name }}</v-card-title>
       <ResourceHeading :heading="heading"/>
       <ResourceMethods
@@ -26,7 +27,6 @@ import { mapGetters } from 'vuex'
 import ResourcesList from '@/components/ResourcesList'
 import ResourceHeading from '@/components/ResourceHeading'
 import ResourceMethods from '@/components/ResourceMethods'
-// import ResourceTable from '@/components/ResourceTable'
 
 export default {
   name: 'Classes',
@@ -34,7 +34,6 @@ export default {
     ResourcesList,
     ResourceHeading,
     ResourceMethods
-    // ResourceTable
   },
   data: () => ({
     resourceName: null

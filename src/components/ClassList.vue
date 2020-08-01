@@ -5,7 +5,7 @@
       <v-simple-table
         dense
         v-if="getClassList !== undefined"
-        height="800px"
+        max-height="800px"
       >
         <template v-slot:default>
           <tbody>

@@ -1,6 +1,6 @@
 <template>
   <v-card>
-  <v-simple-table dark dense v-if="getFields !== undefined">
+  <v-simple-table class="cyan lighten-5" dense v-if="getFields !== undefined">
     <template v-slot:default>
       <thead class="primary">
         <tr>

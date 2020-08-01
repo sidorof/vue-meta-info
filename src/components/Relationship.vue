@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-card class="px-3 my=0">
+    <v-card class="pl-3 my=0">
       <v-card-title>
         {{ modelClass }} Relationship
       </v-card-title>
@@ -10,7 +10,7 @@
         <div class="body-1">Entity:</div>
         <div class="mx-3 font-weight-bold"> {{ relation.relationship.entity }}</div>
       </v-card>
-      <v-card class="mt-3" color="#ddd">
+      <v-card class="mt-3 secondary">
         <div class="pl-3 pt-2 font-weight-bold">
           {{ relation.relationship.entity }} Fields
         </div>

@@ -1,21 +1,6 @@
 <template>
   <v-card >
-    <v-card-title>URL</v-card-title>
-    <v-card-text class="ml-4 pl-5 font-weight-bold">
-      {{ getCurrentMethod.url}}
-    </v-card-text>
-    <v-card class="pb-4">
-      <v-card-title>
-        Requirements
-        <div class="pl-1 text-body-1"> (Method Decorators)</div>
-      </v-card-title>
-      <div
-        class="ml-4 pl-5 font-weight-bold"
-        v-if="getCurrentMethod.requirements !== []"
-      >
-        {{ requirements }}
-      </div>
-    </v-card>
+    <MethodHeading/>
     <v-card-title>Inputs</v-card-title>
     <FieldsTable :fields="inputFields"/>
     <div
@@ -48,11 +33,13 @@ import { mapGetters } from 'vuex'
 import { fmtFieldsList, showRequirements } from '@/lib/common'
 import FieldsTable from '@/components/FieldsTable'
 import Relationship from '@/components/Relationship'
+import MethodHeading from './MethodHeading'
 
 export default {
   name: 'Single',
   props: ['modelClass'],
   components: {
+    MethodHeading,
     FieldsTable,
     Relationship
   },

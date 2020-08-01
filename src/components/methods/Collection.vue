@@ -1,17 +1,7 @@
 <template>
   <v-card>
-    <v-card-title>{{ getCurrentMethod.url}}</v-card-title>
-    <v-card flat>
-      <v-card-title>
-        Requirements
-        <div class="pl-1 text-body-1"> (Method Decorators)</div>
-      </v-card-title>
-      <div class="ml-4 pl-4 font-weight-bold">
-        {{ requirements }}
-      </div>
-    </v-card>
-    <v-card-title>Queries</v-card-title>
-    {{ getCurrentMethod.queryString }}
+    <MethodHeading/>
+    <v-card-title>Query Variables</v-card-title>
     <FieldsTable :fields="queryFields"/>
 
     <div v-if="responseRelations">
@@ -35,11 +25,13 @@ import { mapGetters } from 'vuex'
 import { fmtFieldsList, showRequirements } from '@/lib/common'
 import FieldsTable from '@/components/FieldsTable'
 import Relationship from '@/components/Relationship'
+import MethodHeading from './MethodHeading'
 
 export default {
   name: 'Single',
   props: ['modelClass'],
   components: {
+    MethodHeading,
     FieldsTable,
     Relationship
   },
