@@ -16,7 +16,7 @@ export const fmtFieldsList = (fieldsObj) => {
 }
 
 export const showRequirements = (requirements) => {
-  if (requirements.length === 0) {
+  if (requirements === undefined) {
     return '(Any requirements from method decorators would show here.)'
   } else {
     return requirements

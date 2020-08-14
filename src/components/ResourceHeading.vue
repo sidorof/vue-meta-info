@@ -5,8 +5,8 @@
         <template v-slot:default>
           <tbody>
            <tr
-                  v-for="resource in headingList"
-                  :key="resource.key"
+            v-for="resource in headingList"
+            :key="resource.key"
            >
               <td >{{ resource.key }}</td>
               <td class="font-weight-bold">{{ resource.value }}</td>
@@ -27,9 +27,9 @@ export default {
   computed: {
     headingList () {
       return [
-        { key: 'modelClass', value: this.heading.modelClass },
-        { key: 'urlPrefix', value: this.heading.urlPrefix },
-        { key: 'base url', value: this.heading.url }
+        { key: 'Model Class', value: this.heading.modelClass },
+        { key: 'Url Prefix', value: this.heading.urlPrefix },
+        { key: 'Base Url', value: this.heading.baseUrl }
       ]
     }
   }

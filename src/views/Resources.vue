@@ -48,7 +48,7 @@ export default {
         return {
           modelClass: resource.modelClass,
           urlPrefix: resource.urlPrefix,
-          url: resource.url
+          baseUrl: resource.baseUrl
         }
       }
       return null
