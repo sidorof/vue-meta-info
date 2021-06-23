@@ -22,3 +22,15 @@ export const showRequirements = (requirements) => {
     return requirements
   }
 }
+
+export const fmtName = (name) => {
+  let tmp = ''
+  for (let i = 0; i < name.length; i++) {
+    const char = name[i]
+    if (char !== char.toLowerCase() && i > 0) {
+      tmp += ' '
+    }
+    tmp += char
+  }
+  return tmp
+}
