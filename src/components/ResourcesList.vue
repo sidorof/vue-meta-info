@@ -14,7 +14,7 @@
                 :key="resource.name"
                 @click="calcResource(i, resource.name)"
               >
-                <td >{{ resource.name }}</td>
+                <td >{{ resourceName(resource.name) }}</td>
              </tr>
             </tbody>
             </template>
@@ -25,6 +25,8 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+import { fmtName } from '@/lib/common'
+
 export default {
   name: 'ResourcesList',
   data: () => ({
@@ -75,6 +77,9 @@ export default {
       this.clearResource()
       const fullResource = this.getResources[name]
       this.loadResource(fullResource)
+    },
+    resourceName (name) {
+      return fmtName(name)
     }
   }
 }

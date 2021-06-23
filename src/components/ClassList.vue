@@ -10,7 +10,7 @@
         <template v-slot:default>
           <tbody>
             <tr
-              v-for="cls in getClassList"
+              v-for="cls in classList"
               :key="cls"
               @click="setClass(cls)"
             >
@@ -25,6 +25,8 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+import { fmtName } from '@/lib/common'
+
 export default {
   name: 'ClassList',
   data: () => ({}),
@@ -35,7 +37,15 @@ export default {
     ...mapGetters({
       getClassList: 'meta/getClassList',
       getClass: 'meta/getClass'
-    })
+    }),
+    classList () {
+      const tmp = []
+      const clsList = this.getClassList
+      for (let i = 0; i < clsList.length; i++) {
+        tmp.push(fmtName(clsList[i]))
+      }
+      return tmp
+    }
   },
   methods: {
     ...mapActions({
@@ -45,10 +55,7 @@ export default {
     }),
     setClass (cls) {
       this.clearClass()
-      this.loadClass({ name: cls })
-      // if (this.getClass(cls) === undefined) {
-      //   this.loadClass({ name: cls })
-      // }
+      this.loadClass({ name: cls.replaceAll(' ', '') })
     }
   }
 }
