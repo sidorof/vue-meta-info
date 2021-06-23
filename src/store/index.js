@@ -27,7 +27,6 @@ export default new Vuex.Store({
       commit('clearError')
     },
     setError ({ commit }, payload) {
-      console.log('actions:setError', payload)
       commit('setError', payload)
     }
   },
