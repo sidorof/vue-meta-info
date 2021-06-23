@@ -41,14 +41,6 @@
 
 <script>
 export default {
-  name: 'App',
-
-  components: {
-    // HelloWorld
-    // Classes
-  },
-
-  data: () => ({
-  })
+  name: 'App'
 }
 </script>
